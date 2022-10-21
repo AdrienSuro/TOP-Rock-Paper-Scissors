@@ -8,10 +8,19 @@
     <script src="script.js"></script> 
 </head>
 <body>
-    <select name="playerChoice" id="playerChoice">
+    <h1>My first game : Rock, Paper, Scissors</h1>
+    <h2>Your choice :</h2>
+    <select name="playerChoice" id="inputId">
         <option value="Rock">Rock</option>
         <option value="Paper">Paper</option>
         <option value="Scissors">Scissors</option>
     </select>
+    <button type="button" onclick="getInputValue();">Submit</button>
+    <hr>
+    <h2>Computer's choice :</h2>
+    <p>The computer chose <span id="computerChoice"></span></p>
+    <!-- <p>Your choice</p> -->
+    <!-- <input type="text" placeholder="Rock, Paper or Scissors ?" id="inputId"> -->
+    <!-- <button type="button" onclick="getInputValue();">Get Value</button> -->
 </body>
 </html>
