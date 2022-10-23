@@ -1,8 +1,10 @@
+//declare the variables :
 let userPoints = 0;
 let computerPoints = 0;
 let userChoice = '';
 let computerChoice = '';
 
+//declare the functions :
 function game() {
     for (let i = 0; i < 5; i++) {
         singleRound();
@@ -66,16 +68,11 @@ function getComputerChoice() {
 }
 
 function getUserChoice() {
-    randomNumber = Math.floor(Math.random() * 3);
-    if (randomNumber == 0) {
-        userChoice = "Rock";
-    }
-    else if (randomNumber == 1) {
-        userChoice = 'Paper';
-    } 
-    else if (randomNumber == 2) {
-        userChoice = 'Scissors';
-    }
+    userChoice = prompt("What is your choice for this round ?");
 }
 
+//run the function : 
 game();
+
+//communicate with the html :
+document.getElementById("computerChoice").innerHTML = computerChoice;
