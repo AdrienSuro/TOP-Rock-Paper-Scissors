@@ -36,48 +36,74 @@ function singleRound() {
         //...FINISH THIS after single round logic is done
     }
     if (userChoice === computerChoice) {
-        const roundResult = document.createElement('p'); 
-        roundResult.textContent = `It's a draw!`;
-        gameDiv.appendChild(roundResult);
         userPoints += 1;
         computerPoints += 1;
+        const roundResult = document.createElement('p'); 
+        const runningScore = document.createElement('p');
+        roundResult.textContent = `It's a draw!` 
+        runningScore.textContent = `You have ${userPoints}, Computer has ${computerPoints}. Click for next round!`
+        gameDiv.appendChild(roundResult);
+        gameDiv.appendChild(runningScore);
+
     }
     else if (computerChoice === "Paper" && userChoice === "Rock") {
-        const roundResult = document.createElement('p'); 
-        roundResult.textContent = `You lost, ${userChoice} beats ${computerChoice}.` ; 
-        gameDiv.appendChild(roundResult);
         computerPoints += 1;
+        const roundResult = document.createElement('p'); 
+        const runningScore = document.createElement('p');        
+        roundResult.textContent = `You lost, ${userChoice} gets beaten by ${computerChoice}.` 
+        runningScore.textContent = `You have ${userPoints}, Computer has ${computerPoints}. Click for next round!` ; 
+        gameDiv.appendChild(roundResult);
+        gameDiv.appendChild(runningScore);
     }
     
     else if (computerChoice === "Paper" && userChoice === "Scissors") {
+        userPoints += 1; 
         const roundResult = document.createElement('p'); 
-        roundResult.textContent = `You won, ${userChoice} beats ${computerChoice}.` ; 
+        const runningScore = document.createElement('p');        
+        roundResult.textContent = `You won, ${userChoice} beats ${computerChoice}.` 
+        runningScore.textContent = `You have ${userPoints}, Computer has ${computerPoints}. Click for next round!` ; 
         gameDiv.appendChild(roundResult);
-        userPoints += 1;      
+        gameDiv.appendChild(runningScore);
     }
+
     else if (computerChoice === "Rock" && userChoice === "Paper") {
+        userPoints += 1;      
         const roundResult = document.createElement('p'); 
-        roundResult.textContent = `You won, ${userChoice} beats ${computerChoice}.` ; 
-        gameDiv.appendChild(roundResult);     
-        userPoints += 1;        
+        const runningScore = document.createElement('p');        
+        roundResult.textContent = `You won, ${userChoice} beats ${computerChoice}.` 
+        runningScore.textContent = `You have ${userPoints}, Computer has ${computerPoints}. Click for next round!` ; 
+        gameDiv.appendChild(roundResult);
+        gameDiv.appendChild(runningScore);     
     }
+
     else if (computerChoice === "Rock" && userChoice === "Scissors") {
-        const roundResult = document.createElement('p'); 
-        roundResult.textContent = `You lost, ${userChoice} beats ${computerChoice}.` ; 
-        gameDiv.appendChild(roundResult);
         computerPoints +=1 ;
+        const roundResult = document.createElement('p'); 
+        const runningScore = document.createElement('p');        
+        roundResult.textContent = `You lost, ${userChoice} gets beaten by ${computerChoice}.` 
+        runningScore.textContent = `You have ${userPoints}, Computer has ${computerPoints}. Click for next round!` ; 
+        gameDiv.appendChild(roundResult);
+        gameDiv.appendChild(runningScore);
     }
+
     else if (computerChoice === "Scissors" && userChoice === "Rock") {
+        userPoints += 1;  
         const roundResult = document.createElement('p'); 
-        roundResult.textContent = `You won, ${userChoice} beats ${computerChoice}.` ; 
+        const runningScore = document.createElement('p');        
+        roundResult.textContent = `You won, ${userChoice} beats ${computerChoice}.` 
+        runningScore.textContent = `You have ${userPoints}, Computer has ${computerPoints}. Click for next round!` ; 
         gameDiv.appendChild(roundResult);
-        userPoints += 1;        
+        gameDiv.appendChild(runningScore);
     }
+
     else if (computerChoice === "Scissors" && userChoice === "Paper") {
-        const roundResult = document.createElement('p'); 
-        roundResult.textContent = `You lost, ${userChoice} beats ${computerChoice}.` ; 
-        gameDiv.appendChild(roundResult);
         computerPoints +=1 ;
+        const roundResult = document.createElement('p'); 
+        const runningScore = document.createElement('p');        
+        roundResult.textContent = `You lost, ${userChoice} gets beaten by ${computerChoice}.`
+        runningScore.textContent = `You have ${userPoints}, Computer has ${computerPoints}. Click for next round!` ; 
+        gameDiv.appendChild(roundResult);
+        gameDiv.appendChild(runningScore);
     }
 }
 
