@@ -26,15 +26,15 @@ scissorsBtn.addEventListener('click', () => {
     singleRound();
 });
 
-
+//try to create a logic using do...while : the first round will be displayed without timeOut, for the others, the score will be displayed for 3 seconds.
 
 //declare the functions :
 
 function singleRound() {
-    getComputerChoice();
-    if (userPoints === 5 && computerPoints === 5) {
-        //...FINISH THIS after single round logic is done
+    if (computerPoints === 5 || userPoints === 5 ) {
+        return ;
     }
+    getComputerChoice();
     if (userChoice === computerChoice) {
         userPoints += 1;
         computerPoints += 1;
@@ -104,6 +104,22 @@ function singleRound() {
         runningScore.textContent = `You have ${userPoints}, Computer has ${computerPoints}. Click for next round!` ; 
         gameDiv.appendChild(roundResult);
         gameDiv.appendChild(runningScore);
+    }
+
+    if (userPoints === 5 && computerPoints === 5) {
+        const finalResult = document.createElement('p');
+        finalResult.textContent = `The game is over. It's a draw, how boring!`
+        gameDiv.appendChild(finalResult);
+    }
+    else if (userPoints === 5 && computerPoints <= 5) {
+        const finalResult = document.createElement('p');
+        finalResult.textContent = `YOU WON THE GAME !!! You have ${userPoints} points, whereas the computer has only ${computerPoints} points! You did better than Kasparov.`
+        gameDiv.appendChild(finalResult);
+    }
+    else if (userPoints <= 5 && computerPoints === 5) {
+        const finalResult = document.createElement('p');
+        finalResult.textContent = `YOU LOST THE GAME :-( You have ${userPoints} points, but the computer has  ${computerPoints} points! Humanity brace yourself !`
+        gameDiv.appendChild(finalResult);
     }
 }
 
