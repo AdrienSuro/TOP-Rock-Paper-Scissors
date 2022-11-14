@@ -9,15 +9,48 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>My first game : Rock, Paper, Scissors</h1>
-    <p>Unfortunately, it only works in the console :-(</p>
-    <p>Look up the console to see the final result !!!</p>
-    <h1>Second attempt :</h1>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
-    <div class="game">
-
+    <div class="roundWinner">
+    </div>
+    <div class="nextRound">
+        <p></p>
+    </div>
+    <div class="title"><h1>Rock, Paper, Scissors</h1></div>
+    <div class="userSpace">
+        <div class="userOptions">
+            <h2 id="userChoice">Make a choice !</h2>
+            <div class="buttons">
+                <button class="rock">
+                    <img class="rockImage" src="img/rock1.png">
+                </button>
+                <button class="paper">
+                    <img class="paperImage" src="img/paper1.png">
+                </button>
+                <button class="scissors">
+                    <img class="scissorsImage" src="img/scissors1.png">
+                </button>
+            </div>
+        </div>
+        <div class="userScore">
+            <h2>Your score</h2>
+            <div class="currentScore"></div>
+        </div>
+    </div>
+    <div class="computerSpace">
+        <div class ="computerOptions">
+            <h2>Computer chose :</h2>
+            <div class="buttons">
+                <button class="question">
+                    <img class="questionComputer" src="img/question1.png">
+                    <img class="rockComputer invisible" src="img/rock1.png">
+                    <img class="paperComputer invisible" src="img/paper1.png">
+                    <img class="scissorsComputer invisible" src="img/scissors1.png">
+                </button>
+            </div>
+        </div>
+        <div class="computerScore">
+            <h2 id="computerScore">Computer score</h2>
+            <div class="currentComputerScore"></div>
+        </div>
     </div>
 </body>
 </html>

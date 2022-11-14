@@ -1,4 +1,176 @@
+* {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin:0;
+}
+
 h1 {
     color: brown;
+    font-size: 60px;
+    justify-self: center;
 }
+
+h2 {
+    font-size: 50px;
+}
+
+h2#userChoice {
+    font-size: 65px;
+    margin-top: 0px;
+}
+
+h2#computerScore {
+    font-size: 40px;
+    text-align: center;
+}
+
+.title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    height: 16vh;
+}
+
+.userSpace,
+.computerSpace {
+    display:flex;
+    flex-flow: row nowrap;
+    height: 42vh;
+}
+
+.userOptions,
+.computerOptions {
+    width:70vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.buttons {
+    padding-top: 0px;
+    display : flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 70vw;
+}
+
+.userScore,
+.computerScore
+{
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width:30vw;
+    border: dashed;
+    border-width: 10px;
+    border-radius: 5px;
+    margin: 30px;
+
+}
+
+.currentComputerScore {
+    font-size: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.currentScore {
+    font-size: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+button {
+    width: 20vh;
+    height: 20vh;
+    background-color: white;
+    border-radius: 10px;
+    padding: 0px;
+    margin: 0px;
+}
+
+.choiceImage,
+.questionComputer,
+.scissorsComputer,
+.rockComputer,
+.paperComputer,
+.rockImage,
+.scissorsImage,
+.paperImage {
+    width: 20vh;
+    height: 20vh;
+    transition: all 1s;
+}
+
+.grow {
+    transform: scale(1.4);
+}
+
+.visible {
+    display: flex;
+    width: 30vh;
+    height: 30vh;
+}
+
+.invisible {
+    display: none;
+}
+
+.rock,
+.paper,
+.scissors,
+.question {
+    padding:0px;
+    border: black;
+}
+
+.roundWinner {
+    display: none;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    z-index: 2;
+    font-size: 80px;
+    background-color: white;
+    border-style: groove;
+    border-color: red;
+    border-width: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.roundWinnerDisplay {
+    display: flex;
+}
+
+.nextRound {
+    display: none;
+}
+
+.nextRoundDisplay {
+    display: block;
+}
+
+.reloadBtn {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+
+
+
 
